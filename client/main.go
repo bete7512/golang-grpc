@@ -25,6 +25,9 @@ func main() {
 		Done:        true,
 	}
 
+	todo.ProtoMessage()
+	log.Println(todo.ProtoReflect())
+
 	response, err := client.CreateTodo(context.Background(), &todo)
 
 	if err != nil {

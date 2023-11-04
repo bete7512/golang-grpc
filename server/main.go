@@ -34,5 +34,7 @@ func (s *TodoServiceServer) CreateTodo(ctx context.Context, req *todo.NewTodo) (
 		Description: req.Description,
 		Done:        req.Done,
 	}
+	log.Println(todo.String())
+
 	return &todo, nil
 }
